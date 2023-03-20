@@ -67,3 +67,40 @@
           background-color: rgba(0, 158, 227, 0);
      }
 }
+
+.header .m1 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+.header .m2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+.header .m3 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation-delay: 10s;
+  animation: dash 2s linear forwards;
+}
+
+.header .m4 {
+  fill: white;
+  animation-delay: 20s;
+  animation: fill 1s linear forwards;
+}
+
+@keyframes fill {
+  to {
+    fill: #00A650;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

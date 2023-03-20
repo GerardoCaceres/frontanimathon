@@ -1,4 +1,5 @@
-import alcancia from '../../images/pots/alcancia.svg'
+// import alcancia from '../../images/pots/alcancia.svg'
+import Alcancia from '../icons/alcancia';
 import corazon from '../../images/pots/corazon.svg';
 import avion from '../../images/pots/avion.svg';
 import casa from '../../images/pots/casa.svg';
@@ -10,7 +11,7 @@ function Pots() {
     <div className="pots">
 
       <div className="header">
-        <img src={alcancia} className="pots-icon" alt="alcancia" />
+       <Alcancia/>
         <p>Você guardou R$ 1.250 entre estas<br/> Reservas neste mês</p>
       </div>
 
