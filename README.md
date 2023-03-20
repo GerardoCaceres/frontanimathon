@@ -4,6 +4,7 @@
 
 ## Reglas:
 
+- Se tiene que crear un branch feature
 - Se tiene que generar un componente con datos mockeados 
 - Se tiene que generar una firma que satisfaga al componente
 - Se puede hacer cualquier tipo de animacion con css
