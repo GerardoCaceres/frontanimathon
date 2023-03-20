@@ -1,21 +1,11 @@
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #282c34;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +14,74 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.CriptoRow {
+  width: 400px;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
+.CriptoRow-logo {
+  height: 50%;
+  pointer-events: none;
+}
+
+.Amount{
+  width: 70%;
+  color: #282c34;
+  display: flex;
+  align-items: flex-start;
+}
+p {
+  margin: 0  10px 0 5px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .CriptoRow-logo {
+    animation: CriptoRow-logo-spin infinite 20s linear;
+  }
+}
+
+
+@keyframes CriptoRow-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+
+.down {
+  animation: showUp 0.001s infinite;
+}
+
+@keyframes showUp {
+  from {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+}
+
+.left {
+  animation: showUpX 0.001s infinite;
+}
+
+@keyframes showUpX {
+  from {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(10%);
+    opacity: 0;
   }
 }
