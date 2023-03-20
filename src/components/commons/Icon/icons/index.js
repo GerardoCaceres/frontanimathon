@@ -1,5 +1,19 @@
-export { default as BannerInvestments } from "./BannerInvestments";
-export { default as Buildings } from "./Buildings";
-export { default as Clouds } from "./Clouds";
-export { default as MoneySign } from "./MoneySign";
-export { default as OkSign } from "./OkSign";
+import BannerInvestments from './BannerInvestments';
+import Buildings from './Buildings';
+import Cdb from './Cdb';
+import Crypto from './Crypto';
+import Clouds from './Clouds';
+import MoneySign from './MoneySign';
+import OkSign from './OkSign';
+import Pots from './Pots';
+
+export {
+  BannerInvestments,
+  Buildings,
+  Cdb,
+  Crypto,
+  Clouds,
+  MoneySign,
+  OkSign,
+  Pots,
+};

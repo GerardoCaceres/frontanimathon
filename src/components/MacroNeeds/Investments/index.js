@@ -1,13 +1,12 @@
 import React from 'react'
-import {BannerInvestments, Clouds, MoneySign, Buildings, OkSign} from '../../commons/Icon/icons/'
 
-// import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useInView } from 'react-intersection-observer';
+import Card from '../../commons/Card';
+import Icon from '../../commons/Icon';
 
-const Investments = () => { 
+const Investments = () => {
 
-  
-  const [ sectionOne , sectionOneInview ] = useInView({
+  const [ sectionOne, sectionOneInview ] = useInView({
     threshold: 0.9,
   })
 
@@ -16,43 +15,31 @@ const Investments = () => {
   })
 
 
-
   return (
     <div className="macroneed">
-      <div className="section" ref={sectionOne}>
-        <BannerInvestments />
+      <div className="section one" ref={sectionOne}>
+        <Icon icon="BannerInvestments" />
         <div className="pills">
           <span>Investments</span>
           <span>Credits</span>
         </div>
-          <Clouds className={sectionOneInview ? "animate__animated animate__fadeInLeft" : "" } />
-          <MoneySign className={sectionOneInview ? "animate__animated animate__fadeInUp" : ""} />
-          <h1 className={sectionOneInview ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}>Neste mês sua conta rendeu R$ 50</h1>
-        {/* <AnimationOnScroll animateIn="animate__fadeInLeft" offset="200" animateOnce animatePreScroll>
-          <Clouds />
-        </AnimationOnScroll> 
-        <AnimationOnScroll animateIn="animate__fadeInUp" offset="200" animateOnce animatePreScroll>
-          <MoneySign />
-        </AnimationOnScroll>
-        <AnimationOnScroll animateIn="animate__fadeInUp">
-          <h1>Neste mês sua conta rendeu R$ 50</h1>
-        </AnimationOnScroll> */}
+        <div className="section__illustration">
+          <Icon icon="Clouds" className={sectionOneInview ? "animate__animated animate__fadeInLeft" : ""} />
+          <Icon icon="MoneySign" className={sectionOneInview ? "animate__animated animate__fadeInUp circle" : "circle"} />
+        </div>
+        <h1 className={sectionOneInview ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}>Sua conta rendeu mais que a poupança. Faça um depósito para o seu dinheiro continuar crescendo.</h1>
       </div>
-      <div className="section" ref={sectionTwo} >
-        <Buildings  className={sectionTwoInView ? "animate__animated animate__fadeInLeft" : ""}/>
-        <OkSign className={sectionTwoInView ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}/>
-        <h3 className={sectionTwoInView ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""}>
+      <div className="section two" ref={sectionTwo} style={{opacity: sectionTwoInView ? 1 : 0}} >
+        <div className="section__illustration">
+          <Icon icon="Buildings" className={sectionTwoInView ? "animate__animated animate__fadeInLeft" : ""} />
+          <Icon icon="OkSign" className={sectionTwoInView ? "circle animate__animated animate__fadeInUp animate__delay-1s" : "circle"} />
+        </div>
+        <h1 className={sectionTwoInView ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""}>
           Outro ponto interessante é que você descobriu novos caminhos, muito bom!
-        </h3>
-        {/* <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
-          <Buildings />
-        </AnimationOnScroll>
-        <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce>
-          <OkSign />
-        </AnimationOnScroll>
-        <h3>
-          Outro ponto interessante é que você descobriu novos caminhos, muito bom!
-        </h3> */}
+        </h1>
+        <Card icon="Cdb" title="Investiu em CDB" text="Foi uma ótima escolha para seu dinheiro render com segurança." className={sectionTwoInView ? "animate__animated animate__fadeInLeft delay-it01" : ""} />
+        <Card icon="Pots" title="Criou Reservas" text="Agora é ter foco para guardar dinheiro e alcançar suas metas." className={sectionTwoInView ? "animate__animated animate__fadeInLeft delay-it02" : ""} />
+        <Card icon="Crypto" title="Explorou Criptomoedas" text="Aproveite o mundo cripto com facilidade e proteção garantida." className={sectionTwoInView ? "animate__animated animate__fadeInLeft delay-it03" : ""} />
       </div>
     </div>
   );

@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  padding: 14px 24px;
+  margin-bottom: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 6px;
+  width: 75%;
+  text-align: left;
+
+  &__text {
+    margin-left: 16px;
+  }
+
+}
