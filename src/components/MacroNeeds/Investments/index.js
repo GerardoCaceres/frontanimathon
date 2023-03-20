@@ -30,11 +30,11 @@ const Investments = () => {
           <h1 className={sectionOneInview ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}>Neste mês sua conta rendeu R$ 50</h1>
         {/* <AnimationOnScroll animateIn="animate__fadeInLeft" offset="200" animateOnce animatePreScroll>
           <Clouds />
-        </AnimationOnScroll> */}
-        {/* <AnimationOnScroll animateIn="animate__fadeInUp" offset="200" animateOnce animatePreScroll>
+        </AnimationOnScroll> 
+        <AnimationOnScroll animateIn="animate__fadeInUp" offset="200" animateOnce animatePreScroll>
           <MoneySign />
-        </AnimationOnScroll> */}
-        {/* <AnimationOnScroll animateIn="animate__fadeInUp">
+        </AnimationOnScroll>
+        <AnimationOnScroll animateIn="animate__fadeInUp">
           <h1>Neste mês sua conta rendeu R$ 50</h1>
         </AnimationOnScroll> */}
       </div>
