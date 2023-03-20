@@ -1,0 +1,60 @@
+.Main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.Items > div {
+    position: relative;
+}
+
+.Svg1 {
+    top: 20px;
+    z-index: 2;
+    animation-name: svg1;
+    animation-duration: 2.5s;
+} 
+
+.Svg2 {
+    bottom: 80px;
+    left: 75px;
+    z-index: 3;
+    animation-name: svg2;
+    animation-duration: 2s;
+}
+
+.Svg3 {
+    bottom: 90px;
+    left: 60px;
+    z-index: 1;
+    animation-name: svg3;
+    animation-duration: 2s;
+}
+
+@keyframes svg1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes svg2 {
+    0% {
+        left: -100px;
+    }
+    100% {
+        left: 75px;
+    }
+}
+
+@keyframes svg3 {
+    0% {
+        left: 200px;
+    }
+    100% {
+        left: 60px;
+    }
+}
+
