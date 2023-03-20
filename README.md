@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/62289056/226359280-38dc4a7d-d547-4a70-aee1-bcf6fa6134a3.png)
 
-# Getting Started with Create React App
+# FrontAnimathon 2023
 
 ## Reglas:
 
