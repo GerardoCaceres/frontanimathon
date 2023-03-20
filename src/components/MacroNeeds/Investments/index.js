@@ -6,7 +6,9 @@ import { useInView } from 'react-intersection-observer';
 
 const Investments = () => { 
 
-  
+  const [ wasAnimatedOne, setWasAnimatedOne ] = React.useState(false)
+  const [ wasAnimatedTwo, setWasAnimatedTwo ] = React.useState(false)
+
   const [ sectionOne , sectionOneInview ] = useInView({
     threshold: 0.9,
   })
@@ -15,7 +17,13 @@ const Investments = () => {
     threshold: 0.15,
   })
 
+  React.useEffect (() => {
+    if(!wasAnimatedOne && sectionOneInview) setWasAnimatedOne(true)
+  }, [sectionOneInview])
 
+  React.useEffect (() => {
+    if(!wasAnimatedTwo && sectionTwoInView) setWasAnimatedTwo(true)
+  }, [sectionTwoInView])
 
   return (
     <div className="macroneed">
@@ -25,9 +33,9 @@ const Investments = () => {
           <span>Investments</span>
           <span>Credits</span>
         </div>
-          <Clouds className={sectionOneInview ? "animate__animated animate__fadeInLeft" : "" } />
-          <MoneySign className={sectionOneInview ? "animate__animated animate__fadeInUp" : ""} />
-          <h1 className={sectionOneInview ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}>Neste mês sua conta rendeu R$ 50</h1>
+          <Clouds className={wasAnimatedOne ? "animate__animated animate__fadeInLeft" : "" } />
+          <MoneySign className={wasAnimatedOne ? "animate__animated animate__fadeInUp" : ""} />
+          <h1 className={wasAnimatedOne ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}>Neste mês sua conta rendeu R$ 50</h1>
         {/* <AnimationOnScroll animateIn="animate__fadeInLeft" offset="200" animateOnce animatePreScroll>
           <Clouds />
         </AnimationOnScroll> 
@@ -39,9 +47,9 @@ const Investments = () => {
         </AnimationOnScroll> */}
       </div>
       <div className="section" ref={sectionTwo} >
-        <Buildings  className={sectionTwoInView ? "animate__animated animate__fadeInLeft" : ""}/>
-        <OkSign className={sectionTwoInView ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}/>
-        <h3 className={sectionTwoInView ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""}>
+        <Buildings  className={wasAnimatedTwo ? "animate__animated animate__fadeInLeft" : ""}/>
+        <OkSign className={wasAnimatedTwo ? "animate__animated animate__fadeInUp animate__delay-1s" : ""}/>
+        <h3 className={wasAnimatedTwo ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""}>
           Outro ponto interessante é que você descobriu novos caminhos, muito bom!
         </h3>
         {/* <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce>
