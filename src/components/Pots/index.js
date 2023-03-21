@@ -9,9 +9,9 @@ import './style.css';
 function Pots() {
   return (
     <div className="pots">
-
       <div className="header">
-       <Alcancia/>
+        <div class="coin"></div>
+        <Alcancia/>
         <p>Você guardou R$ 1.250 entre estas<br/> Reservas neste mês</p>
       </div>
 
@@ -40,7 +40,7 @@ function Pots() {
       <div className="footer">
         <div className='image'><img src={agenda} className="pots-icon" alt="alcancia" /></div>
         <p>Sabia que é possível programar reservas? <br/> É prático e perfeito para ajudar a focar!</p>
-        <button>Ir para Reservas</button>
+        <button className='pots-button'>Ir para Reservas</button>
       </div>
     </div>
   );

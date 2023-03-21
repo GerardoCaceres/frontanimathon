@@ -1,9 +1,13 @@
-.pots {
+/* Estilos generales */
+
+.pots, .pot {
   background-color: #F5F5F5  ;
   max-height: 90vh;
   text-align: center;
   padding: 60px 20px;
 }
+
+/* Sección titulo y alcancia */
 
 .header p {
   color: #0B105B;
@@ -12,60 +16,9 @@
   line-height: 22px;
 }
 
-.list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.list ul li {
-  display: flex;
-  background-color: white;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 14px 17px;
-}
-
-.footer p {
-  color:  #0B105B;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.footer .image {
-  background-color: white;
-  padding: 10px;
-  height: 15px;
-  width: 15px;
-  border-radius: 100%;
-  margin: auto;
-}
-
-.footer button {
-  background: none;
-  border: none;
-  color: #009EE3;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  margin-top: 30px;
-  animation: shadow-pulse 1s infinite;
-  box-shadow:  0 10px 20px  rgba(0, 158, 227, 0.05), 0 6px 6px  rgba(0, 158, 227, 0.02);
-  border-radius: 2px;
-}
-
-@keyframes shadow-pulse
-{
-     0% {
-          box-shadow: 0 0 0 0px rgba(0, 158, 227, 0.1);
-          background-color: rgba(0, 158, 227, 0.1);
-     }
-     100% {
-          box-shadow: 0 0 0 20px  rgba(0, 158, 227, 0);
-          background-color: rgba(0, 158, 227, 0);
-     }
+.header svg {
+ z-index: 2;
+ position: relative;
 }
 
 .header .m1 {
@@ -83,15 +36,94 @@
 .header .m3 {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation-delay: 10s;
+  animation-delay: 5s;
   animation: dash 2s linear forwards;
 }
 
 .header .m4 {
   fill: white;
   animation-delay: 20s;
-  animation: fill 1s linear forwards;
+  animation: fill 0.5s linear forwards;
+  animation-delay: 1s;
 }
+
+.coin {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f4d03f;
+  box-shadow: inset 0 -2px 0 #c39e2d;
+  margin: auto;
+  z-index: 1;
+  transform: translate(30px, -40px);
+  opacity: 0;
+  animation: coin-fall 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s forwards;
+}
+
+/* Sección items de pots */
+
+.list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list ul li {
+  display: flex;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 14px 17px;
+}
+
+/* Sección agenda, texto y botón de Pots */
+
+.footer p {
+  color:  #0B105B;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.footer .image {
+  background-color: white;
+  padding: 10px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.pots-button {
+  background: none;
+  border: none;
+  color: #009EE3;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 30px;
+  animation: shadow-pulse 1s infinite;
+  box-shadow:  0 10px 20px  rgba(0, 158, 227, 0.05), 0 6px 6px  rgba(0, 158, 227, 0.02);
+  border-radius: 2px;
+}
+
+/* Animación sombra de pulso en botón */
+
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 158, 227, 0.1);
+          background-color: rgba(0, 158, 227, 0.1);
+     }
+     100% {
+          box-shadow: 0 0 0 20px  rgba(0, 158, 227, 0);
+          background-color: rgba(0, 158, 227, 0);
+     }
+}
+
+
+/* Animación relleno del check con fondo verde */
 
 @keyframes fill {
   to {
@@ -99,8 +131,20 @@
   }
 }
 
+/* Animación de dibujar el frasco */
+
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+/* Animación de moneda cayendo al frasco */
+
+@keyframes coin-fall {
+  to {
+    opacity: 1;
+    top: 100px;
+    transform: rotate(90deg) translate(30px, 0);
   }
 }

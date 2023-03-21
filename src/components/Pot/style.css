@@ -1,0 +1,32 @@
+/* Estilos generales */
+
+p {
+  color: #0B105B;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.check {
+  animation: bounce 5s forwards;
+  transform-origin: center;
+  transform: rotate(0deg);
+}
+
+.check-inner {
+  animation: fill-avion 1s forwards;
+  fill: #9B3ACB;
+  animation-delay: 3s;
+}
+
+@keyframes bounce {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fill-avion {
+  to {
+    fill: white;
+  }
+}
