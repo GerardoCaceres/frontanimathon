@@ -1,0 +1,36 @@
+.Items {
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Divider {
+    width: 213px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Item_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.Item_title > b {
+    font-size: 16px;
+}
+
+
+.Item_subtitle {
+    display: flex;
+    color: gray;
+}
+
+.Item_subtitle > span{
+    font-size: 14px;
+}
