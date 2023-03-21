@@ -13,7 +13,7 @@ const Section = ({ section }) => {
       </div>
       <Animate classIn="animate__fadeIn" delay="0.8s" duration='2s' children={<h1>{title}</h1>} />
       {sections ? sections.map(({ icon, title, message }) => (
-        <Animate classIn="animate__bounceInLeft" delay="0.8s" duration='1.6s' children={<Card icon={icon} title={title} text={message} />} />)) : null}
+        <Animate key={title} classIn="animate__bounceInLeft" delay="0.8s" duration='1.6s' children={<Card icon={icon} title={title} text={message} />} />)) : null}
     </div>
   )
 }
