@@ -1,9 +1,10 @@
 .App {
-  text-align: center;
-}
-
-.space {
-  height: 1000px;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -33,11 +34,17 @@
   height: 1000px;
 }
 
-/* @keyframes App-logo-spin { */
-/*   from { */
-/*     transform: rotate(0deg); */
-/*   } */
-/*   to { */
-/*     transform: rotate(360deg); */
-/*   } */
-/* } */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Space {
+  height: 150vh;
+  display: flex;
+  background-color: lightblue;
+}
