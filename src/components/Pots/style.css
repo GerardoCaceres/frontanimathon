@@ -1,16 +1,10 @@
-body {
-  background-image: url('../../images/pots/background.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  animation-name: wave;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 3;
+.pots-animated, .pot-animated {
+  background: url('../../images/pots/background.svg') no-repeat center/cover;
+  animation: wave 2s ease-in-out 3;
 }
 
 .pots {
-  max-height: 90vh;
+  min-height: 100vh;
   text-align: center;
   padding: 60px 20px;
 }
@@ -29,33 +23,33 @@ body {
  position: relative;
 }
 
-.header .m1 {
+.pots-animated .header .m1 {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 5s linear forwards;
 }
 
-.header .m2 {
+.pots-animated .header .m2 {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 5s linear forwards;
 }
 
-.header .m3 {
+.pots-animated .header .m3 {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation-delay: 5s;
   animation: dash 2s linear forwards;
 }
 
-.header .m4 {
+.pots-animated .header .m4 {
   fill: white;
   animation-delay: 20s;
   animation: fill 0.5s linear forwards;
   animation-delay: 1s;
 }
 
-.coin {
+.pots-animated .coin {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -92,7 +86,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.list li:hover img {
+.pots-animated .list li:hover img {
   animation: bounce 0.5s linear 1 forwards;
 }
 
@@ -130,7 +124,7 @@ body {
   margin: auto;
 }
 
-.pots-button {
+.pots-animated .pots-button, .pot-animated .pots-button {
   background: none;
   border: none;
   color: #009EE3;

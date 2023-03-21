@@ -1,5 +1,9 @@
 /* Estilos generales */
 
+.pot {
+  padding: 50px 20px;
+}
+
 p {
   color: #0B105B;
   font-size: 18px;
@@ -7,13 +11,13 @@ p {
   line-height: 22px;
 }
 
-.check {
+.pot-animated  .check {
   animation: rotate 5s forwards;
   transform-origin: center;
   transform: rotate(0deg);
 }
 
-.check-inner {
+.pot-animated  .check-inner {
   animation: fill-avion 1s forwards;
   fill: #9B3ACB;
   animation-delay: 3s;

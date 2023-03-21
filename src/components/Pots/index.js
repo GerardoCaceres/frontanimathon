@@ -5,10 +5,12 @@ import avion from '../../images/pots/avion.svg';
 import casa from '../../images/pots/casa.svg';
 import agenda from '../../images/pots/agenda.svg';
 import './style.css';
+import { useInView } from 'react-intersection-observer';
 
 function Pots() {
+  const [ref, inView] = useInView({});
   return (
-    <div className="pots">
+    <div ref={ref} className={inView ? 'pots pots-animated' : 'pots'}>
       <div className="header">
         <div class="coin"></div>
         <Alcancia/>
