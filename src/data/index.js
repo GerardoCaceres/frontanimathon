@@ -5,25 +5,25 @@ const data = {
             price: 1500,
             icon: "bitcoin",
             label: "Bitcoin",
-            balance: 0.00000001
+            balance: "0.00000001"
         },
         {
             price: 1200,
             icon: "ethereum",
             label: "Ethereum",
-            balance: 0.00000001
+            balance: "0.00000001"
         },
         {
             price: 1200,
             icon: "pax_dollar",
             label: "Pax Dollar",
-            balance: 0.00000001
+            balance: "0.00000001"
         },
         {
             price: 900,
             icon: "bitcoin",
             label: "Mercado Coin",
-            balance: 0.00000001
+            balance: "0.00000001"
         }
     ],
     footer: "Em 28 de fevereiro - 19:00",
