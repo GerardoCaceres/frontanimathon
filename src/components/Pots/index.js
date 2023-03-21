@@ -1,4 +1,5 @@
-import alcancia from '../../images/pots/alcancia.svg'
+// import alcancia from '../../images/pots/alcancia.svg'
+import Alcancia from '../icons/alcancia';
 import corazon from '../../images/pots/corazon.svg';
 import avion from '../../images/pots/avion.svg';
 import casa from '../../images/pots/casa.svg';
@@ -9,8 +10,9 @@ function Pots() {
   return (
     <div className="pots">
       <div className="header">
-        <img src={alcancia} className="pots-icon" alt="alcancia" />
-        <p>Você guardou R$ 1.250 entre estas<br /> Reservas neste mês</p>
+        <div class="coin"></div>
+        <Alcancia/>
+        <p>Você guardou R$ 1.250 entre estas<br/> Reservas neste mês</p>
       </div>
 
       <div className="list">
@@ -43,8 +45,8 @@ function Pots() {
 
       <div className="footer">
         <div className='image'><img src={agenda} className="pots-icon" alt="alcancia" /></div>
-        <p>Sabia que é possível programar reservas? <br /> É prático e perfeito para ajudar a focar!</p>
-        <button>Ir para Reservas</button>
+        <p>Sabia que é possível programar reservas? <br/> É prático e perfeito para ajudar a focar!</p>
+        <button className='pots-button'>Ir para Reservas</button>
       </div>
     </div>
   );
