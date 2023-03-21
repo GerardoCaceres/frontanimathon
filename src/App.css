@@ -41,6 +41,7 @@ p {
 @media (prefers-reduced-motion: no-preference) {
   .CriptoRow-logo {
     animation: CriptoRow-logo-spin infinite 20s linear;
+    animation: CriptoRow-logo-move 2s linear;
   }
 }
 
@@ -51,6 +52,15 @@ p {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes CriptoRow-logo-move {
+  from {
+    transform: translateX(-30%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 
