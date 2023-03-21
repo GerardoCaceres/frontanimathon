@@ -5,10 +5,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Pot/>
-      <div className='free'> Espacio publicitario </div>
+      {/* <div className='free'> Espacio publicitario </div> */}
       <Pots/>
-      <div className='free'> Espacio publicitario </div>
+      {/* <div className='free'> Espacio publicitario </div>
+      <Pot/> */}
     </div>
   );
 }
