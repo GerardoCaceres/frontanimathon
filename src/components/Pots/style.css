@@ -1,7 +1,11 @@
-.pots-animated, .pot-animated {
+.pots, .pot {
   background: url('../../images/pots/background.svg') no-repeat center/cover;
+}
+
+.pots-animated, .pot-animated {
   animation: wave 2s ease-in-out 3;
 }
+
 
 .pots {
   min-height: 100vh;
