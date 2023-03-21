@@ -1,4 +1,5 @@
 @import '../commons/Card/shared';
+@import '../commons/Section/shared';
 
 .macroneed {
   min-height: calc(100vh - 3.75em);
@@ -9,33 +10,6 @@
   width: 360px;
   overflow: hidden;
   margin: auto;
-}
-
-.section {
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &__illustration {
-    width: 100%;
-    position: relative;
-    padding: 20px 0;
-
-    .absolute {
-      position: absolute;
-      top: 50%;
-      margin: auto;
-      width: 100%;
-    }
-  }
-
-  h1 {
-    padding: 5px 15px;
-    margin-bottom: 24px;
-  }
-
 }
 
 .pills {
