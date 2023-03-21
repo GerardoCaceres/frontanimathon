@@ -2,7 +2,7 @@ const data = {
     header: "Este foi seu saldo em criptomoedas",
     list: [
         {
-            price: 1500,
+            price: 1510,
             icon: "bitcoin",
             label: "Bitcoin",
             balance: "0.00000001"
