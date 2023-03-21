@@ -11,8 +11,8 @@ const Investments = ({data}) => {
     <div className="macroneed">
         <Icon icon="BannerInvestments" />
         <div className="pills">
-          <span>Investments</span>
-          <span>Credits</span>
+          <span>Investimentos e Reservas</span>
+          <span>Controle de gastos</span>
       </div>
       <Section section={investments.assets} />
       <Section section={investments.welcome} />
