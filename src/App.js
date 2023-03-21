@@ -2,6 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+const rotate = [
+  { transform: "rotate(0)" },
+  { transform: "rotate(360deg)" },
+];
+
+const timming = {
+  duration: 3000,
+  iterations: Infinity,
+}
+
 function useAnimate({ refOpt }) {
   const animRef = useRef()
   const refVar = useRef(null);
@@ -15,27 +25,35 @@ function useAnimate({ refOpt }) {
     const { current: anim } = animRef;
 
     if (!autoPlay) anim.pause()
-  }, ref)
+  }, [ref])
 
-  return { animate, ref, getAnimation }
+  const useAnimateObserver = (options, callback, observerOptions) => {
+    useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          animate(options)
+          callback();
+        }
+      }, observerOptions)
+
+      if (ref.current) observer.observe(ref.current)
+
+      return () => {
+        // getAnimation().cancel();
+        observer.disconnect()
+      }
+    }, [options, callback, observerOptions])
+  }
+  return { animate, ref, getAnimation, useAnimateObserver }
 }
 
 function App() {
-  const { animate, ref, getAnimation } = useAnimate({})
+  const { animate, ref, getAnimation, useAnimateObserver } = useAnimate({})
+  useAnimateObserver({ keyframes: rotate, animationOptions: timming, autoPlay: true }, () => console.log('Viendo'), { threshold: 1.0 });
 
-  const rotate = [
-    { transform: "rotate(0)" },
-    { transform: "rotate(360deg)" },
-  ];
-
-  const timming = {
-    duration: 3000,
-    iterations: Infinity,
-  }
-
-  useEffect(() => {
-    animate({ keyframes: rotate, animationOptions: timming, autoPlay: true })
-  }, [])
+  // useEffect(() => {
+  //   animate({ keyframes: rotate, animationOptions: timming, autoPlay: true })
+  // }, [])
 
   const play = () => {
     getAnimation().play();
@@ -47,6 +65,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="space" />
       <header className="App-header">
         <img ref={ref} src={logo} className="App-logo" alt="logo" />
         <button onClick={play}>Play</button>
