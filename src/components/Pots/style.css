@@ -1,5 +1,15 @@
+body {
+  background-image: url('../../images/pots/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 3;
+}
+
 .pots {
-  background-color: #F5F5F5  ;
   max-height: 90vh;
   text-align: center;
   padding: 60px 20px;
@@ -19,12 +29,39 @@
 
 .list ul li {
   display: flex;
+  align-items: center;
   background-color: white;
   border-radius: 4px;
   margin-bottom: 8px;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 14px 17px;
+  padding: 0 17px;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.list li .pots-icon {
+  transition: transform 0.3s ease;
+}
+
+.list li:hover img {
+  animation: bounce 0.5s linear 1 forwards;
+}
+
+.list li:hover .pots-icon {
+  transform: translateY(-10px) scale(1.5);
+}
+
+.list li:hover {
+  background-color: rgba(239, 243, 243, 0.929);
+}
+
+.left-column {
+  display: flex;   
+}
+
+.left-column p {
+  margin-left: 10px;
 }
 
 .footer p {
@@ -58,12 +95,42 @@
 
 @keyframes shadow-pulse
 {
-     0% {
-          box-shadow: 0 0 0 0px rgba(0, 158, 227, 0.1);
-          background-color: rgba(0, 158, 227, 0.1);
-     }
-     100% {
-          box-shadow: 0 0 0 20px  rgba(0, 158, 227, 0);
-          background-color: rgba(0, 158, 227, 0);
-     }
+  0% {
+      box-shadow: 0 0 0 0px rgba(0, 158, 227, 0.1);
+      background-color: rgba(0, 158, 227, 0.1);
+  }
+  100% {
+      box-shadow: 0 0 0 20px  rgba(0, 158, 227, 0);
+      background-color: rgba(0, 158, 227, 0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: center 0px;
+  }
+  50% {
+    background-position: 5px 30px;
+  }
+  100% {
+    background-position: center 0px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  50% {
+    transform: translateY(0) scale(1.2);
+  }
+  75% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
