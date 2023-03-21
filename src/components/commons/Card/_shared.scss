@@ -1,7 +1,7 @@
 .card {
   display: flex;
   padding: 14px 24px;
-  margin-bottom: 8px;
+  margin: 0 auto 8px;
   background: #FFFFFF;
   border: 1px solid #E5E5E5;
   border-radius: 6px;
@@ -11,5 +11,4 @@
   &__text {
     margin-left: 16px;
   }
-
 }

@@ -23,10 +23,11 @@
     position: relative;
     padding: 20px 0;
 
-    .circle {
+    .absolute {
       position: absolute;
-      left: calc(50% - 27.5px);
-      top: calc(50% - 27.5px);
+      top: 50%;
+      margin: auto;
+      width: 100%;
     }
   }
 
