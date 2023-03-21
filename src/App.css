@@ -1,7 +1,6 @@
 
 .App {
   text-align: center;
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   height: 100vh;
@@ -62,28 +61,12 @@ p {
   }
 }
 
-
-@keyframes CriptoRow-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-@keyframes CriptoRow-logo-move {
-  from {
-    transform: translateX(-30%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+b {
+  display: flex;
 }
 
 .down {
-  animation: showUp 0.001s infinite;
+  animation: showUp 0.0015s infinite;
 }
 
 .left {
@@ -117,3 +100,21 @@ p {
   }
 }
 
+@keyframes CriptoRow-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes CriptoRow-logo-move {
+  from {
+    transform: translateX(-30%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

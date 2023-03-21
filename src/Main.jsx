@@ -1,7 +1,6 @@
 import React from 'react';
 import './Main.css'
 import { useInView } from 'react-intersection-observer';
-import {CriptoRow} from "./components/CriptoRow";
 
 
 const Main = () => {
@@ -13,9 +12,6 @@ const Main = () => {
 
     return (
         <div className={inView && `Main`} ref={ref}>
-			<CriptoRow amount={1500} clxs={'down'}/>
-          <CriptoRow amount={1200} clxs={'left'}/>
-          <CriptoRow amount={1700} clxs={''}/>
 			<div className='Items'>
 				<div className={inView && `Svg1`}>
 					<svg width="100" height="100" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

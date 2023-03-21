@@ -2,6 +2,8 @@ import React from 'react';
 
 import './List.css';
 import svg from '../../images/svg'
+import {AnimationNumber} from "../AnimationNumber";
+import { useInView } from 'react-intersection-observer';
 
 const Bitcoin = () => (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,14 +20,20 @@ const Bitcoin = () => (
 );
 
 const List = ({ data }) => {
-    console.log(svg);
+    const { ref, inView } = useInView({
+        /* Optional options */
+        threshold: 1,
+        triggerOnce: true,
+        delay: 500,
+    });
+    console.log(inView);
   return (
-    <div className='List'>
+    <div className='List' ref={ref}>
         {data.map(item => (
             <div key={item.label} className="Items">
                 <div className='Item_title'>
                     <Bitcoin />
-                    <b>R$ {item.price}</b>
+                    <b>R$ {inView && <AnimationNumber limit={item.price} clxs={'down'} />}</b>
                 </div>
                 <div className='Item_subtitle'>
                     <span>{item.label} {item.balance}</span>

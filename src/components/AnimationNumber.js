@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 const clx = require('classnames');
 
 export function AnimationNumber({limit, clxs}){
@@ -8,7 +8,10 @@ export function AnimationNumber({limit, clxs}){
             if (count < limit) {
                 setCount(count + 1);
             }
-        }, 1);
+            // if (count > limit) {
+            //     setCount(limit)
+            // }
+        }, 1.5);
 
         return () => clearInterval(interval);
     }, [count, limit]);
